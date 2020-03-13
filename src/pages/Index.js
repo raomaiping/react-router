@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Link,Redirect} from 'react-router-dom'
 class Index extends Component {
     constructor(props) {
         super(props);
@@ -10,10 +10,12 @@ class Index extends Component {
                 {cid:789,title:"前端小菜鸟的个人博客-3"}
             ]
          }
+         this.props.history.push("/home/")
     }
     render() { 
-        return ( 
+        return (   
             <div>
+                 {/* <Redirect to="/home/"></Redirect> */}
                 <h2>前端小菜鸟吖</h2>
                 <ul>
                     {
